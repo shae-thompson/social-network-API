@@ -1,118 +1,84 @@
-const names = [
-  'Aaran',
-  'Aaren',
-  'Aarez',
-  'Aarman',
-  'Aaron',
-  'Aaron-James',
-  'Aarron',
-  'Aaryan',
-  'Aaryn',
-  'Aayan',
-  'Aazaan',
-  'Abaan',
-  'Abbas',
-  'Abdallah',
-  'Abdalroof',
-  'Abdihakim',
-  'Abdirahman',
-  'Abdisalam',
-  'Abdul',
-  'Abdul-Aziz',
-  'Abdulbasir',
-  'Abdulkadir',
-  'Abdulkarem',
-  'Smith',
-  'Jones',
-  'Coollastname',
-  'enter_name_here',
-  'Ze',
-  'Zechariah',
-  'Zeek',
-  'Zeeshan',
-  'Zeid',
-  'Zein',
-  'Zen',
-  'Zendel',
-  'Zenith',
-  'Zennon',
-  'Zeph',
-  'Zerah',
-  'Zhen',
-  'Zhi',
-  'Zhong',
-  'Zhuo',
-  'Zi',
-  'Zidane',
-  'Zijie',
-  'Zinedine',
-  'Zion',
-  'Zishan',
-  'Ziya',
-  'Ziyaan',
-  'Zohaib',
-  'Zohair',
-  'Zoubaeir',
-  'Zubair',
-  'Zubayr',
-  'Zuriel',
-  'Xander',
-  'Jared',
-  'Courtney',
-  'Gillian',
-  'Clark',
-  'Jared',
-  'Grace',
-  'Kelsey',
-  'Tamar',
-  'Alex',
-  'Mark',
-  'Tamar',
-  'Farish',
-  'Sarah',
-  'Nathaniel',
-  'Parker',
+const usersData = [
+  {
+    username: "aaran123",
+    email: "aaran@email.com"
+  },
+  {
+    username: "abdulla.is.cool",
+    email: "abdulla.is.cool@email.com"
+  },
+  {
+    username: "zeeeek",
+    email: "zeek@email.com"
+  },
+  {
+    username: "kodakblack",
+    email: "noflockin@email.com"
+  },
+  {
+    username: "notoriousbig",
+    email: "biggie@email.com"
+  },
 ];
 
-const appDescriptions = [
-  'Decision Tracker',
-  'Find My Phone',
-  'Learn Piano',
-  'Starbase Defender',
-  'Tower Defense',
-  'Monopoly Money Manager',
-  'Movie trailers',
-  'Hello world',
-  'Stupid Social Media App',
-  'Notes',
-  'Messages',
-  'Email',
-  'Compass',
-  'Firefox',
-  'Running app',
-  'Cooking app',
-  'Poker',
-  'Deliveries',
+const thoughtsData = [
+  {
+    thoughtText: 'Thoughts are the words of our minds!',
+    username: "aaran123"
+  },
+  {
+    thoughtText: 'Here is a cool thought...',
+    username: "abdulla.is.cool"
+  },
+  {
+    thoughtText: 'I feel burnt-out',
+    username: "zeeeek",
+  },
+  {
+    thoughtText: 'I am so tired',
+    username: "kodakblack",
+  },
+  {
+    thoughtText: '39 days until out final project is due',
+    username: "notoriousbig",
+  },
+  {
+    thoughtText:  'I have a 2000 word essay to write tonight about dispute resolution',
+    username: "kodakblack",
+  },
+  {
+    thoughtText:   'No thoughts, just tears',
+    username: "abdulla.is.cool"
+  },
+  {
+    thoughtText: 'Stupid Social Media App',
+    username: "zeeeek",
+  },
+  
 ];
 
-// Get a random item given an array
-const getRandomArrItem = (arr) => arr[Math.floor(Math.random() * arr.length)];
-
-// Gets a random full name
-const getRandomName = () =>
-  `${getRandomArrItem(names)} ${getRandomArrItem(names)}`;
-
-// Function to generate random assignments that we can add to student object.
-const getRandomAssignments = (int) => {
-  const results = [];
-  for (let i = 0; i < int; i++) {
-    results.push({
-      assignmentName: getRandomArrItem(appDescriptions),
-      score: Math.floor(Math.random() * (99 - 70 + 1) + 70),
-    });
+const reactionsData = [
+  {
+    reactionBody: 'LOL!',
+    username: "zeeeek",
+  },
+  { 
+    reactionBody: 'I could not agree more!',
+    username: 'notoriousbig',
+  },
+  {
+    reactionBody: 'If you say so',
+    username: 'kodakblack',
+  },
+  {
+    reactionBody: 'WOW!!!',
+    username: 'abdulla.is.cool',
+  },
+  {
+    reactionBody: 'This is dumb',
+    username: 'aaran123',
   }
-  return results;
-};
+]
 
 // Export the functions for use in seed.js
-module.exports = { getRandomName, getRandomAssignments };
+module.exports = { usersData, thoughtsData, reactionsData };
